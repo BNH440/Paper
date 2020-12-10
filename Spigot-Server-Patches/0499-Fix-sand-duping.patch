@@ -6,30 +6,28 @@ Subject: [PATCH] Fix sand duping
 If the falling block dies during teleportation (entity#move), then we need
 to detect that by placing a check after the move.
 
+I removed the patch
+
 diff --git a/src/main/java/net/minecraft/server/EntityFallingBlock.java b/src/main/java/net/minecraft/server/EntityFallingBlock.java
-index 0fbcf454c2db2427055123424c6d10cfbb939c17..76aac1b131f314775e418339e434f4f2da2ad619 100644
+index 0fbcf454c2db2427055123424c6d10cfbb939c17..cc0f54386bbce27dda4d720dba07b2b6b6fd912b 100644
 --- a/src/main/java/net/minecraft/server/EntityFallingBlock.java
 +++ b/src/main/java/net/minecraft/server/EntityFallingBlock.java
-@@ -64,6 +64,11 @@ public class EntityFallingBlock extends Entity {
+@@ -64,6 +64,9 @@ public class EntityFallingBlock extends Entity {
  
      @Override
      public void tick() {
 +        // Paper start - fix sand duping
-+        if (this.dead) {
-+            return;
-+        }
++        //removed
 +        // Paper end - fix sand duping
          if (this.block.isAir()) {
              this.die();
          } else {
-@@ -86,6 +91,12 @@ public class EntityFallingBlock extends Entity {
+@@ -86,6 +89,10 @@ public class EntityFallingBlock extends Entity {
  
              this.move(EnumMoveType.SELF, this.getMot());
  
 +            // Paper start - fix sand duping
-+            if (this.dead) {
-+                return;
-+            }
++            //removed
 +            // Paper end - fix sand duping
 +
              // Paper start - Configurable EntityFallingBlock height nerf
