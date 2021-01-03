@@ -37,10 +37,10 @@ index 716ea2fced5dc9e9a790f25e68252d5bd445b9ce..02ad0b959e636d0f93cfd491b7b54936
      }
  
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index 3c4ce04c811e2df9877965ec35f773a7017c6e45..4a67a78bbb7b633dcf5ea490b888898487a63d7a 100644
+index 02ad843e2d461609945d70be77f2e6334e8835a7..aeb6b01dfa6537f08129c254f3e1180299f56c99 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
-@@ -642,6 +642,7 @@ public abstract class EntityLiving extends Entity {
+@@ -648,6 +648,7 @@ public abstract class EntityLiving extends Entity {
          if (nbttagcompound.hasKeyOfType("Team", 8)) {
              String s = nbttagcompound.getString("Team");
              ScoreboardTeam scoreboardteam = this.world.getScoreboard().getTeam(s);
