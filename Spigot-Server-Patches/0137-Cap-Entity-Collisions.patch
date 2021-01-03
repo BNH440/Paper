@@ -39,10 +39,10 @@ index 170dad8be525b40d764b6e63c981f7b73775a01b..97abed1cede09624748e40331a15a021
      // Spigot end
  
 diff --git a/src/main/java/net/minecraft/server/EntityLiving.java b/src/main/java/net/minecraft/server/EntityLiving.java
-index 3c36b6ea1d130a150afb4116d18af93de9236cad..1b23da5c34704bbc00dd050bdf418a937002d784 100644
+index 41615dadb766cf33a59fbdd55bbc0db2e0e13dc7..43c6da710a2701d75cf7b6c559e426e3c8e370af 100644
 --- a/src/main/java/net/minecraft/server/EntityLiving.java
 +++ b/src/main/java/net/minecraft/server/EntityLiving.java
-@@ -2791,8 +2791,11 @@ public abstract class EntityLiving extends Entity {
+@@ -2803,8 +2803,11 @@ public abstract class EntityLiving extends Entity {
                  }
              }
  
